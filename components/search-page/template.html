@@ -1,0 +1,7 @@
+<input id="query" class="small" type="text" autocomplete="off" ng-model="query" placeholder="search or enter app ID">
+<div id="suggestions" class="small">
+  <a class="suggestion" ng-href="#/app/{{entry.appid}}" ng-repeat="entry in suggestions">
+    <img class="capsule" ng-src="http://cdn.akamai.steamstatic.com/steam/apps/{{entry.appid}}/capsule_sm_120.jpg"/>
+    <span class="name">{{entry.name}}</span>
+  </a>
+</div>

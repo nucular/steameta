@@ -1,0 +1,162 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  background-color: #171a21;
+  text-align: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+main {
+  display: flex;
+  flex-flow: column;
+
+  position: relative; /* for <background> */
+
+  width: 100%;
+  height: 100%;
+}
+
+
+background {
+  opacity: 0.3;
+  z-index: -1;
+  filter: blur(10px);
+}
+
+background .image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  position: absolute;
+  top: 0px; left: 0px;
+  bottom: 0px; right: 0px;
+  
+  transition: opacity 1s;
+  opacity: 0;
+}
+
+background .image.visible {
+  transition: none;
+  opacity: 1;
+  z-index: -1;
+}
+
+
+header {
+  flex: 0 1 auto;
+}
+
+header h1 {
+  font-size: 4vmin;
+  padding-top: 0.7em;
+  padding-bottom: 0.5em;
+}
+
+
+article {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+
+  flex: 1 1 auto;
+}
+
+article .small {
+  display: block;
+  font-size: 5vmin;
+  max-width: 100%;
+}
+
+article .large {
+  display: block;
+  font-size: 11vmin;
+  max-width: 100%;
+}
+
+@media (max-width: 600px) {
+  article {
+    justify-content: flex-start;
+    padding-top: 5vh;
+  }
+}
+
+
+search-page #query {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  padding: 0.3em;
+  margin-bottom: 0.5em;
+  width: 20em;
+}
+
+search-page #query::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color:    #b8b6b4;
+}
+search-page #query:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    #b8b6b4;
+  opacity:  1;
+}
+search-page #query::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    #b8b6b4;
+  opacity:  1;
+}
+search-page #query:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color:    #b8b6b4;
+}
+
+search-page #suggestions {
+  position: absolute;
+  width: 20em;
+  text-align: left;
+}
+
+search-page .suggestion {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 400;
+}
+
+search-page .suggestion:hover {
+  border-right: 2px solid #fff;
+}
+
+search-page .suggestion .capsule {
+  vertical-align: middle;
+  height: 1em;
+  width: auto;
+}
+
+search-page .suggestion .name {
+  vertical-align: middle;
+  margin-left: 0.1em;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SteamETA</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <meta name="viewport" content="initial-scale=1">
+</head>
+<body ng-app="steamCountdownApp">
+  <main>
+    <header>
+      <a href="#/search">
+        <h1>SteamETA</h1>
+      </a>
+    </header>
+    <article ng-view></article>
+    <background></background>
+  </main>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+  <script type="text/javascript" src="utils.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="services/suggestions.js"></script>
+  <script type="text/javascript" src="services/details.js"></script>
+  <script type="text/javascript" src="services/featured.js"></script>
+  <script type="text/javascript" src="services/releasedate.js"></script>
+  <script type="text/javascript" src="services/background.js"></script>
+  <script type="text/javascript" src="components/search-page/component.js"></script>
+  <script type="text/javascript" src="components/countdown-page/component.js"></script>
+  <script type="text/javascript" src="components/background/component.js"></script>
+</body>
+</html>
